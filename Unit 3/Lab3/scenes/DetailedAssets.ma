@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: DetailedAssets.ma
-//Last modified: Wed, Sep 11, 2024 11:54:34 PM
+//Last modified: Thu, Sep 12, 2024 12:15:42 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,13 +13,13 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "193C348F-4E02-AB76-C360-968C594587CB";
+fileInfo "UUID" "C05D01FE-4694-46EB-2075-3B83E133EC1E";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "735FABA8-4346-B3E2-C856-D1A13E4EE598";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 17.791982770660422 12.327442503790525 13.930669877653054 ;
-	setAttr ".r" -type "double3" -21.938352729737471 -308.59999999997859 -2.5490132216541768e-15 ;
+	setAttr ".t" -type "double3" 12.89867740917164 12.048696750266217 19.001554539272156 ;
+	setAttr ".r" -type "double3" -20.738352729697549 -322.60000000003777 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5882EC75-4B59-7A8E-A728-239DF6A9286F";
 	setAttr -k off ".v" no;
@@ -1873,20 +1873,20 @@ createNode mesh -n "LivingRoomShape" -p "LivingRoom";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EB74F4E6-485C-85B4-F673-8A91D36AFF92";
+	rename -uid "55BD9A19-450C-BD4D-89E6-319EAC06EFE6";
 	setAttr -s 10 ".lnk";
 	setAttr -s 10 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "83541EA2-4FF0-DEA4-B67E-C49306850C4C";
+	rename -uid "1B175682-4ACB-A3F5-D0B3-759C8D7A0FC1";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2609EB6F-4CFF-B22F-E47E-508E5E8A8D4E";
+	rename -uid "EE7A36B7-455C-6F34-2007-F2BD19E5AC94";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "40D24B91-4A27-524E-7A14-C19C052E54F6";
+	rename -uid "1C30C43A-40AB-0678-0A21-2EA6238E761F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "278BA83B-449B-E569-9180-F1A4BFB7EB55";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8F0F73C2-41CF-9497-C48B-CCA0B54E1FBA";
+	rename -uid "06A1FC5C-4668-450E-CEF2-1DAC0E4AA065";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "753DDDE5-48D5-59F0-F4F3-7D89AF909FDF";
 	setAttr ".g" yes;
@@ -2093,18 +2093,15 @@ createNode lambert -n "TrimColor";
 createNode shadingEngine -n "lambert4SG";
 	rename -uid "45E78DA3-4D65-B078-66A9-7AB439291118";
 	setAttr ".ihi" 0;
-	setAttr -s 8 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo8";
 	rename -uid "9F20DE7B-44AB-674C-6CE8-E1AD81827E95";
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "4C99D0E3-4BB5-005C-4DE8-78873DD475A6";
-	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "A25A9E43-4ADD-3758-8344-E790EEA98AB7";
+	rename -uid "53201D20-4287-B14F-4819-95BCF8FBF26E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -398.80950796225778 ;
-	setAttr ".tgi[0].vh" -type "double2" 259.52379921126033 44.047617297323995 ;
+	setAttr ".tgi[0].vl" -type "double2" -43.452379225738525 -399.40474603384331 ;
+	setAttr ".tgi[0].vh" -type "double2" 260.1190372828458 43.452379225738525 ;
 	setAttr -s 11 ".tgi[0].ni";
 	setAttr ".tgi[0].ni[0].x" 168.57142639160156;
 	setAttr ".tgi[0].ni[0].y" 5.7142858505249023;
@@ -2112,33 +2109,36 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[1].x" 168.57142639160156;
 	setAttr ".tgi[0].ni[1].y" 5.7142858505249023;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -138.57142639160156;
-	setAttr ".tgi[0].ni[2].y" -37.142856597900391;
+	setAttr ".tgi[0].ni[2].x" 168.57142639160156;
+	setAttr ".tgi[0].ni[2].y" 5.7142858505249023;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 168.57142639160156;
+	setAttr ".tgi[0].ni[3].x" -138.57142639160156;
 	setAttr ".tgi[0].ni[3].y" -37.142856597900391;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
 	setAttr ".tgi[0].ni[4].x" 168.57142639160156;
-	setAttr ".tgi[0].ni[4].y" 5.7142858505249023;
+	setAttr ".tgi[0].ni[4].y" -37.142856597900391;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -138.57142639160156;
+	setAttr ".tgi[0].ni[5].x" 168.57142639160156;
 	setAttr ".tgi[0].ni[5].y" 5.7142858505249023;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" -138.57142639160156;
-	setAttr ".tgi[0].ni[6].y" -37.142856597900391;
+	setAttr ".tgi[0].ni[6].x" 168.57142639160156;
+	setAttr ".tgi[0].ni[6].y" 5.7142858505249023;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
 	setAttr ".tgi[0].ni[7].x" 168.57142639160156;
-	setAttr ".tgi[0].ni[7].y" 5.7142858505249023;
+	setAttr ".tgi[0].ni[7].y" -37.142856597900391;
 	setAttr ".tgi[0].ni[7].nvs" 1923;
 	setAttr ".tgi[0].ni[8].x" 168.57142639160156;
-	setAttr ".tgi[0].ni[8].y" 5.7142858505249023;
+	setAttr ".tgi[0].ni[8].y" -37.142856597900391;
 	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" 168.57142639160156;
-	setAttr ".tgi[0].ni[9].y" -37.142856597900391;
+	setAttr ".tgi[0].ni[9].x" -138.57142639160156;
+	setAttr ".tgi[0].ni[9].y" 5.7142858505249023;
 	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" 168.57142639160156;
+	setAttr ".tgi[0].ni[10].x" -138.57142639160156;
 	setAttr ".tgi[0].ni[10].y" -37.142856597900391;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "16CFA0AE-4D8B-8B25-5455-16BB4C12F4BC";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2184,8 +2184,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyCube2.out" "|FloorTrim|pCube1|pCubeShape1.i";
 connectAttr "polyExtrudeEdge1.out" "ArchwayWallShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -2271,27 +2269,27 @@ connectAttr "|CeilingTrim|pCube2|pCubeShape2.iog" "lambert4SG.dsm" -na;
 connectAttr "|CeilingTrim|pCube1|pCubeShape1.iog" "lambert4SG.dsm" -na;
 connectAttr "lambert4SG.msg" "materialInfo8.sg";
 connectAttr "TrimColor.msg" "materialInfo8.m";
-connectAttr "phong2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "phong2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "TrimColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "WallColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "TileColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "phong1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "WallColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "blinn3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "blinn2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "phong1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "TileColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "TrimColor.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
