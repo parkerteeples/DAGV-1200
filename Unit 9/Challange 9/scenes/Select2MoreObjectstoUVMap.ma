@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: PickanObjecttoUVMap.ma
-//Last modified: Sun, Nov 03, 2024 11:59:11 PM
+//Name: Select2MoreObjectstoUVMap.ma
+//Last modified: Mon, Nov 04, 2024 12:00:50 AM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -15,7 +15,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "3E5149DE-4922-0D68-B800-52B7124B09F1";
+fileInfo "UUID" "3557DF84-48AA-B60E-67FA-7D94CA52FA95";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "3191470F-47B0-DE00-62EC-44B067350E85";
@@ -81220,7 +81220,7 @@ createNode polyTweakUV -n "polyTweakUV3";
 		 0.0020090938 -0.00075636804 0.0028554797 -0.032977693 0.047935389 -0.00052660704
 		 0.0028879941 -0.00064150244 0.002871722 0.036763616 0.0022494197 0.035940111 0.0080580413;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "E30857AD-4161-C9BB-B168-5490679F5840";
+	rename -uid "FD0EB1D8-4B92-F26E-0E56-BA916C309124";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
@@ -81277,6 +81277,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+select -ne :modelPanel4ViewSelectedSet1;
 	setAttr ".ihi" 0;
 connectAttr "groupId107.id" "TreePotShape.iog.og[0].gid";
 connectAttr "blinn1SG.mwc" "TreePotShape.iog.og[0].gco";
@@ -81777,4 +81779,4 @@ connectAttr "LightDefinitionDirectionalLight.iog" ":defaultLightSet.dsm" -na;
 connectAttr "UnderBoatPointLight.iog" ":defaultLightSet.dsm" -na;
 connectAttr "ShellLight.iog" ":defaultLightSet.dsm" -na;
 connectAttr "areaLight1.iog" ":defaultLightSet.dsm" -na;
-// End of PickanObjecttoUVMap.ma
+// End of Select2MoreObjectstoUVMap.ma
