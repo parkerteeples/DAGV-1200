@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: RetroGameRoomWhiteBox.ma
-//Last modified: Fri, Nov 15, 2024 11:26:17 PM
+//Last modified: Fri, Nov 15, 2024 11:34:34 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "77091A97-45DA-C12F-BD57-139251724C2C";
+fileInfo "UUID" "9A86BF70-41AB-D67A-0518-F394E0181888";
 createNode transform -s -n "persp";
 	rename -uid "8C71338D-47B6-74F9-DE49-96B6B8D39368";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.0471038926121121 7.7306625001545326 6.0678595016849206 ;
-	setAttr ".r" -type "double3" -42.338352722882341 -322.20000000010464 4.0252287609950293e-15 ;
+	setAttr ".t" -type "double3" 4.1294197919562796 5.3118060502373385 5.82575882494789 ;
+	setAttr ".r" -type "double3" -29.738352722892504 -322.60000000005368 -2.0018228512194391e-15 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" 5.5511151231257815e-17 -2.2204460492503131e-16 -1.7763568394002501e-15 ;
 	setAttr ".rpt" -type "double3" -8.8133668284614057e-16 -8.5190070412155148e-16 6.0482682276336712e-16 ;
@@ -28,7 +28,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8019AAB9-48FF-6137-6125-A1961810FBCA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 11.889152032910811;
+	setAttr ".coi" 9.5941081788499698;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5183,7 +5183,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[25].y" -45.714286804199219;
 	setAttr ".tgi[0].ni[25].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "EFAB3C90-4F76-FF65-DCF7-5594BF6D1F9B";
+	rename -uid "300573CC-422D-66A2-3201-8DA6A76E2A84";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
